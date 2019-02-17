@@ -11,7 +11,9 @@
               </div>
             </el-header>
             <el-container>
-                <el-aside width="15%">Aside</el-aside>
+                <el-aside>
+                  <LeftAside></LeftAside>
+                </el-aside>
                 <el-main>Main</el-main>
             </el-container>
         </el-container>
@@ -20,18 +22,23 @@
 
 
 <script>
+import LeftAside from "../../components/left-aside.vue";
+
 export default {
-    
-}
+  components: {
+    LeftAside
+  }
+};
 </script>
 
 <style scoped>
-.flex-style{
-    border: 0px solid #eee;
-    display: flex;  /* 自适应屏幕高度*/
-    min-height: 100vh;  /* 自适应屏幕高度*/
-    flex-direction: column;  /* 自适应屏幕高度*/
+.flex-style {
+  border: 0px solid #eee;
+  display: flex; /* 自适应屏幕高度*/
+  min-height: 100vh; /* 自适应屏幕高度*/
+  flex-direction: column; /* 自适应屏幕高度*/
 }
+
  .el-header, .el-footer {
     padding: 0;
     background-color: #23262E;
@@ -45,6 +52,7 @@ export default {
     color: #333;
     text-align: center;
     line-height: 100%;
+    width: 15% !important
   }
   
   .el-main {
