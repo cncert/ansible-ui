@@ -1,5 +1,10 @@
 # ansible-ui
 
+## project desc
+
+![avatar](src\assets\static\pic\ansible-ui.png)
+
+
 ## Project setup
 ```
 npm install
