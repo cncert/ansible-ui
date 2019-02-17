@@ -1,7 +1,15 @@
 <template>
     <div class="flex-style">
         <el-container>
-            <el-header>Header</el-header>
+            <el-header>
+              <!--使用第三方阿里库图标https://blog.csdn.net/qq_32113629/article/details/79740949-->
+              <div class="user-bar align-left">
+                <span class="iconfont icon-ansiblefill"></span>
+              </div>
+              <div class="user-bar align-right">
+                <span class="iconfont icon-user"></span>
+              </div>
+            </el-header>
             <el-container>
                 <el-aside width="15%">Aside</el-aside>
                 <el-main>Main</el-main>
@@ -58,4 +66,14 @@ export default {
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
   }
+  .align-right{
+    float: right;
+  }
+  .user-bar{
+    width: 5%
+  }
+  .align-left{
+    float: left;
+  }
+  
 </style>
