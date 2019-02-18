@@ -7,7 +7,24 @@
                 <span class="iconfont icon-ansiblefill"></span>
               </div>
               <div class="user-bar align-right">
-                <span class="iconfont icon-user"></span>
+                <!-- <span class="iconfont icon-user"></span> -->
+                <el-menu 
+                :default-active="activeIndex" 
+                class="el-menu-demo" 
+                mode="horizontal" 
+                @select="handleSelect" 
+                background-color="#23262e"
+                active-text-color="#409EFF"
+                text-color="white"
+                show-timeout=100
+                menu-trigger=click
+                >
+                  <el-submenu index="1">
+                    <template slot="title"> <span class="iconfont icon-user"></span></template>
+                    <el-menu-item index="1-1" >用户信息</el-menu-item>
+                    <el-menu-item index="1-2" >登出</el-menu-item>
+                  </el-submenu>
+                </el-menu>
               </div>
             </el-header>
             <el-container>
@@ -39,49 +56,49 @@ export default {
   flex-direction: column; /* 自适应屏幕高度*/
 }
 
- .el-header, .el-footer {
-    padding: 0;
-    background-color: #23262E;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-  }
-  
-  .el-aside {
-    background-color: #393D49;
-    color: #333;
-    text-align: center;
-    line-height: 100%;
-    width: 15% !important
-  }
-  
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
-  
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-  
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-  
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
-  }
-  .align-right{
-    float: right;
-  }
-  .user-bar{
-    width: 5%
-  }
-  .align-left{
-    float: left;
-  }
-  
+.el-header,
+.el-footer {
+  padding: 0;
+  background-color: #23262e;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #393d49;
+  color: #333;
+  text-align: center;
+  line-height: 100%;
+  width: 15% !important;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
+.align-right {
+  float: right;
+}
+.user-bar {
+  width: 5%;
+}
+.align-left {
+  float: left;
+}
 </style>
