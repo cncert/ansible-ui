@@ -42,6 +42,11 @@
 import LeftAside from "../../components/left-aside.vue";
 
 export default {
+  beforeCreate () {
+    this.$api.get('hosts_data',null, r =>{
+        this.$store.commit('changeAllHostsData', r.data)
+    })
+  },
   components: {
     LeftAside
   }
@@ -97,6 +102,9 @@ body > .el-container {
 }
 .user-bar {
   width: 5%;
+}
+.user-bar /deep/ .el-submenu__title{
+  padding: 0 0 !important
 }
 .align-left {
   float: left;
